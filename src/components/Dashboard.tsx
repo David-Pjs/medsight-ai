@@ -1313,6 +1313,9 @@ const CaptureNotesView: React.FC = () => {
         age: parsedData.age || newPatientData.age,
         phone_number: parsedData.phone_number || newPatientData.phone_number,
         allergies: parsedData.allergies || newPatientData.allergies,
+        medications: newPatientData.medications,
+        diagnosis: newPatientData.diagnosis,
+        notes: newPatientData.notes,
       });
 
       alert("✨ AI has parsed the patient data! Please review and edit if needed.");
@@ -1366,6 +1369,9 @@ const CaptureNotesView: React.FC = () => {
         age: parsedData.age || newPatientData.age,
         phone_number: parsedData.phone_number || newPatientData.phone_number,
         allergies: parsedData.allergies || newPatientData.allergies,
+        medications: newPatientData.medications,
+        diagnosis: newPatientData.diagnosis,
+        notes: newPatientData.notes,
       });
 
       alert("✨ Basic parsing complete! Please review and complete the form.");
@@ -2056,6 +2062,9 @@ Please provide medication recommendations including dosage, frequency, and durat
         age: parsedData.age || newPatientData.age,
         phone_number: parsedData.phone_number || newPatientData.phone_number,
         allergies: parsedData.allergies || newPatientData.allergies,
+        medications: newPatientData.medications,
+        diagnosis: newPatientData.diagnosis,
+        notes: newPatientData.notes,
       });
 
       alert("✨ AI has parsed the patient data! Please review and edit if needed.");
@@ -2109,6 +2118,9 @@ Please provide medication recommendations including dosage, frequency, and durat
         age: parsedData.age || newPatientData.age,
         phone_number: parsedData.phone_number || newPatientData.phone_number,
         allergies: parsedData.allergies || newPatientData.allergies,
+        medications: newPatientData.medications,
+        diagnosis: newPatientData.diagnosis,
+        notes: newPatientData.notes,
       });
 
       alert("✨ Basic parsing complete! Please review and complete the form.");
