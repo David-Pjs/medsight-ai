@@ -1,73 +1,32 @@
-# React + TypeScript + Vite
+# MedSight AI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Clinical insights at the speed of care.**
 
-Currently, two official plugins are available:
+> 3rd Place — AHEAD Hackathon
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+MedSight AI is an AI-powered clinical platform that converts raw doctor notes into structured summaries and adverse drug reaction (ADR) documentation. It enables real-time sync between doctors, patients, and pharmacies, cutting documentation time and reducing errors at every step of the care chain.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## What it does
 
-## Expanding the ESLint configuration
+- **Note structuring** — converts freeform clinical notes into clean, structured summaries
+- **ADR documentation** — automatically flags and documents adverse drug reactions
+- **Real-time sync** — doctors, patients, and pharmacies all see the same up-to-date record
+- **Claude-powered** — uses the Claude API to understand medical language and generate accurate, consistent documentation
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Stack
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- React
+- Claude API (Anthropic)
+- Node.js
+- TypeScript
+- Dorra API
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## The problem
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Doctors in Nigeria spend a significant portion of their shift on documentation rather than patient care. Clinical notes are often incomplete or inconsistently formatted, making them hard for pharmacies and patients to act on. MedSight AI takes raw notes and turns them into structured, shareable records in seconds.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Live Demo
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+[medsight-ai-demo-live.vercel.app](https://medsight-ai-demo-live.vercel.app)
